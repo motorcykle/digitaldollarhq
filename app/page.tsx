@@ -1,5 +1,6 @@
 import { CoinsIcon, InstagramIcon, DollarSignIcon } from "lucide-react";
 import { Button } from "@/components/ui/button"; // Assuming you're using shadcn's button component
+import Link from "next/link"; // Import Link from Next.js
 
 export default function Home() {
   return (
@@ -8,10 +9,10 @@ export default function Home() {
       <section className="max-w-6xl px-4 py-10 mx-auto text-center">
         <div>
           <h1 className="text-5xl md:text-6xl lg:text-9xl font-extrabold leading-tight">
-            <span className="bg-gradient-to-r  from-blue-400 to-purple-500 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-gray-400 to-purple-500 text-transparent bg-clip-text">
               Learn to <br /> Build Wealth
             </span>
-            <CoinsIcon className="inline-block text-green-400 w-12 h-12 md:w-24 md:h-24 ml-4" />
+            <CoinsIcon className="inline-block text-purple-400 w-12 h-12 md:w-24 md:h-24 ml-4" />
           </h1>
           <p className="mt-6 text-xl md:text-2xl text-muted-foreground font-medium max-w-2xl mx-auto">
             Discover how to achieve{" "}
@@ -19,13 +20,15 @@ export default function Home() {
             and transform your life!
           </p>
           <div className="mt-8">
-            <Button
-              variant="default"
-              size="lg"
-              className="px-6 py-3 text-lg font-semibold"
-            >
-              Join the Waitlist
-            </Button>
+            <Link href="/waitlist">
+              <Button
+                variant="default"
+                size="lg"
+                className="px-6 py-3 text-lg font-semibold"
+              >
+                Join the Waitlist
+              </Button>
+            </Link>
           </div>
           <div className="mt-8">
             <p className="text-sm md:text-base max-w-2xl mx-auto text-muted-foreground">
@@ -127,12 +130,14 @@ export default function Home() {
             help you reach your financial goals.
           </p>
           <div className="mt-8">
-            <Button
-              size="lg"
-              className="px-8 py-4 text-lg font-semibold"
-            >
-              Get Started
-            </Button>
+            <Link href="/get-started">
+              <Button
+                size="lg"
+                className="px-8 py-4 text-lg font-semibold"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
